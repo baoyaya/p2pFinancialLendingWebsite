@@ -1,0 +1,56 @@
+// 颜色变量
+@colorWhite:#fff;
+@color2e8ece:#2e8ece;
+
+@size16:16px;
+
+// 导航
+.navbar{
+    margin-bottom:0;
+    border-radius:0;
+}
+        .navbar-default{
+            .navbar-brand{
+                color:@colorWhite;
+                font-size:24px;
+                font-style:italic;
+                span{
+                    font-size:@size16;
+                    margin-right:5px;
+                }
+            }
+        }
+.navbar-inverse{
+    .navbar-nav{
+        &>li{
+            &>a{
+                color:@colorWhite;
+                &:hover{
+                    color:#00a8ff;
+                    text-decoration:underline;
+                }
+            }
+            .tooltip img{
+                width:100px;
+            }
+        }
+    }
+}
+// 导航
+.navbar{
+ .navbar-left{
+    li{
+        a{
+            font-size:@size16;
+            text-align: center;
+            line-height: 50px;
+            min-width:80px;
+            &:hover{
+                background-color:#f0f0f0;
+                color:#09d;
+            }
+        }
+        
+    }
+}   
+}

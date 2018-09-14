@@ -1,0 +1,22 @@
+// 引入头部样式
+@import url('header.less');
+
+// section样式
+.panel-group{
+    
+    .panel{
+        border-radius: 0;
+    }
+}
+.panel{
+    .panel-body{
+        &>div{
+            border-bottom:1px solid #ccc;
+           
+            height:200px;
+        }
+    }
+}
+
+// 引入尾部样式
+@import url('footer.less');

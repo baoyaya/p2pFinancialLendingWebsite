@@ -1,0 +1,94 @@
+// 引入头部样式
+@import url('header.less');
+
+// 三个特色
+.row{
+   
+    .col-sm-4{
+        background:url("../../../images/feature01.png")no-repeat left center;
+        padding-left: 80px;
+        height:75px;
+        margin:10px 0;
+        h3{
+            margin:0;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 0px;
+        }
+    }
+    .col-sm-4:nth-of-type(2){
+        background:url("../../../images/feature02.png")no-repeat left center;
+ 
+    }
+    .col-sm-4:nth-of-type(3){
+        background:url("../../../images/feature03.png")no-repeat left center;
+ 
+    }
+}
+// 进行中借款
+.panel-default{
+    border:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    .panel-heading{
+        margin: 10px 0px 16px;
+        background-color: transparent;
+        padding:0;
+        h2{
+            font-size: 24px;
+            font-weight: bold;
+            color:@color2e8ece;
+            border-bottom: 3px solid @color2e8ece;
+            line-height: 34px;
+            margin:0;
+        }
+        a{
+            padding:8px 12px;
+        }
+    }
+}
+.table{
+    thead{
+        tr{
+            th{
+                color:#999999;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                font-size:@size16;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+//解决小屏的版面错乱问题
+
+@media all and (max-width:520px){
+    .hideTitle{
+        display: none;
+    }
+}
+
+// 咨询
+.panel-body{
+    padding:0;
+    ul{
+        list-style: none;
+        padding:0;
+        li{
+            line-height: 36px;
+            border-bottom:1px dotted #ccc;
+            a{
+                color:#555;
+            }
+        }
+    }
+}
+
+// 引入尾部样式
+@import url('footer.less');
+
