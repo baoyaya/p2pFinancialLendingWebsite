@@ -82,7 +82,7 @@
                   <a href="">实名认证</a>
                 </li>
                 <li class="list-group-item">
-                  <a href="">银行卡管</a>理</li>
+                  <a href="">银行卡管理</a></li>
                 <li class="list-group-item">
                   <a href="">登录记录</a>
                 </li>
@@ -144,7 +144,7 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="part1">
-
+                  <img src="./images/head_icon.jpg">
             </div>
             <div class="part2">
 

@@ -20,7 +20,7 @@
 <!-- 主导航 -->
 <nav class="navbar navbar-default">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Brand and toggle get grouped for better mobiles display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
         <img src="./images/logo.png">
@@ -61,11 +61,17 @@
       </div>
         <!-- 手机号码 -->
         <div class="form-group">
-          <label for="inputPhone" class="col-md-3 control-label">手机号码</label>
+          <label for="inputMobile" class="col-md-3 control-label">手机号码</label>
           <div class="col-md-9">
-            <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="请输入手机号码">
+            <input type="text" class="form-control" id="inputMobile" name="mobilePhone" placeholder="请输入手机号码">
           </div>
         </div>
+        <!-- <div class="form-group">
+          <label for="inputmobiles" class="col-md-3 control-label">手机号码</label>
+          <div class="col-md-9">
+            <input type="text" class="form-control" id="inputmobiles" name="mobiles" placeholder="请输入手机号码">
+          </div>
+        </div> -->
         <!-- 邮箱 -->
         <div class="form-group">
           <label for="inputemail" class="col-md-3 control-label">邮箱</label>
@@ -95,6 +101,7 @@
 <!-- 引入bootstrapvalidator -->
 <script src="./lib/bootstrapvalidator/js/bootstrapValidator.min.js"></script>
 <script src="./dist/js/p2p.min.js"></script>
-<script src="./dist/js/formCheck.min.js"></script>
+<!-- <script src="./dist/js/formCheck.min.js"></script> -->
+<script src="./src/js/formCheck.js"></script>
 </body>
 </html>

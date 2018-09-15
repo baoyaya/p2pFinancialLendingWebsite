@@ -7,6 +7,8 @@
     <title>Document</title>
     <!-- bootstrap样式 -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入bootstrapvalidator样式 -->
+    <link rel="stylesheet" href="./lib/bootstrapvalidator/css/bootstrapValidator.min.css">
     <!-- 引入编译和压缩后的css文件 -->
     <link rel="stylesheet" href="./dist/css/minCss/regLogin.min.css">
 </head>
@@ -35,7 +37,7 @@
       <h3 class="panel-title">用户登录</h3>
     </div>
     <div class="panel-body">
-      <form class="form-horizontal">
+      <form class="form-horizontal" id="userlogin">
       <!-- 用户名 -->
         <div class="form-group">
           <label for="inputUsername" class="col-md-3 control-label">用户名</label>
@@ -61,6 +63,25 @@
   </div>
 </div>
 <!-- section结束 -->
+<!-- 模态框开始 -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+       Modal content
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 模态框结束 -->
 <!-- 引入footer -->
 <?php
   require_once('footer.php');
@@ -69,6 +90,10 @@
 <script src="./lib/jquery/jquery.min.js"></script>
 <!-- 引入bootstrap -->
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- 引入bootstrapvalidator -->
+<script src="./lib/bootstrapvalidator/js/bootstrapValidator.min.js"></script>
 <script src="./dist/js/p2p.min.js"></script>
+<!-- <script src="./dist/js/formCheck.min.js"></script> -->
+<script src="./src/js/formCheck.js"></script>
 </body>
 </html>
