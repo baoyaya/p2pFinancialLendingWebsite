@@ -1,7 +1,7 @@
 $(function () {
 
     $("#form-test").bootstrapValidator({
-        // live: 'disabled',//验证时机，enabled是内容有变化就验证（默认），disabled和submitted是提交再验证
+        // live:'disabled',//验证时机，enabled是内容有变化就验证（默认），disabled和submitted是提交再验证
         feedbackIcons: {//根据验证结果显示的各种图标
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
@@ -71,15 +71,15 @@ $(function () {
         }
     })
     .on('success.form.bv', function (e) {
-        //验证成功后的处理，比如：发起AJAX  
+        //验证成功后的处理，比如：发起AJAX
         e.preventDefault();
         // Get the form instance
         var $form = $(e.target);
 
         // Get the BootstrapValidator instance
         var bv = $form.data('bootstrapValidator');
-        const reqUrl = './api/userAdd.php';
-        const data = $form.serialize();
+        var reqUrl = './api/userAdd.php';
+        var data = $form.serialize();
         // Use Ajax to submit form data
         $.post(reqUrl, data, function (result) {
             if (result.issuccess) {
@@ -130,26 +130,27 @@ $(function () {
     .on('success.form.bv', function (e) {
         //验证成功后的处理，比如：发起AJAX  
         e.preventDefault();
-        // Get the form instance
+        // Get the form instance 
         var $form = $(e.target);
 
         // Get the BootstrapValidator instance
         var bv = $form.data('bootstrapValidator');
-        const reqUrl = './api/userCheck.php';
-        const data = $form.serialize();
+        var reqUrl = './api/userCheck.php';
+        var data = $form.serialize();
         // Use Ajax to submit form data
         $.post(reqUrl, data, function (result) {
 
             if (result.issuccess) {
                 $("#myModalLabel").text("登录成功");
-                $(".modal-body").html(`<span class='glyphicon glyphicon-ok'></span>${result.msg},等候<span id='num'>6</span>`);
-                var num = 6;
-                var timeId = setInterval(() => {
+                $(".modal-body").html(`<span class='glyphicon glyphicon-ok'></span>${result.msg},等候<span id='num'>3</span>秒跳转到个人中心`);
+                var num = 3;
+                var timeId = setInterval(function(){
                     num--;
                     $("#num").text(num);
                     if (num == 0) {
                         clearInterval(timeId);
                         location.href = './personal.php';
+                        
                     }
                 }, 1000);
             } else {
@@ -160,4 +161,5 @@ $(function () {
             $('#myModal').modal('show');
         }, 'json');
     });
+  
 });

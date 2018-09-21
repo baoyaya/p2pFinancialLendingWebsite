@@ -2,21 +2,121 @@
 @import url('header.less');
 
 // section样式
+// @import url("leftTablist.less");
+body{
+    overflow-x: hidden;
+}
 .panel-group{
     
     .panel{
         border-radius: 0;
     }
 }
-.panel{
-    .panel-body{
-        &>div{
-            border-bottom:1px solid #ccc;
-           
-            height:200px;
+
+#mainContent{
+    .btnOn{
+        display: none;
+    }
+}
+#person{
+    margin-top: 10px;
+    position: relative;
+    height:500px;
+    left:0;
+    transition: all 1s;
+    .panel{
+        .panel-body{
+            &>div{
+                border-bottom:1px solid #ccc;
+                padding: 10px 0;
+               
+            }
+            .part1{
+                img{
+                    border:1px solid #ccc;
+                    padding:10px;
+                    width:90px;
+                    height:90px;
+                    box-sizing: border-box;
+                    margin-right:14px;
+                }
+            }
+            .part2{
+               
+                .row{
+                   &:not(:last-child){
+                    margin-bottom:20px;
+                   }
+                    h5{
+                        font-weight: bold;
+                        margin-top: 0;
+                    }
+                    img{
+                        margin-right:14px;
+                    }
+                    &:first-child{
+                        font-size:18px;
+                    }
+                }
+                span{
+                    color:#337ab7;
+                }
+                .col-xs-12{
+                    text-align: center;
+                }
+            }
         }
+    }
+   
+}
+
+.el-borrow-form-tip{
+    width: 300px;
+    border-radius: 3px;
+    border:1px solid #ddd;
+    box-shadow: 1px 1px 20px #ddd;
+    padding:20px 30px;
+    position: absolute;
+    top:250px;
+    right: 100px;
+}
+.el-tip-info{
+    padding: 20px;
+    background-color: #F4F8FA;
+    border-left: 2px solid #0099DD;
+    margin-bottom: 20px;
+    h3{
+        color: #09d;
     }
 }
 
+@media all and (max-width:1200px){
+    
+    .el-borrow-form-tip{
+        display: none;
+    }
+ }
+@media all and (max-width:768px){
+
+    #leftTreeMenu{
+        position: absolute;
+        left:0;
+    }
+    #mainContent{
+        position: absolute;
+        right:-48%;
+        .btnOn{
+            position: absolute;
+            top:0;
+            display: block;
+        }
+    }
+    #person{
+        height:900px;
+        &.active{
+            left:-50%;
+        }
+    }
+}
 // 引入尾部样式
 @import url('footer.less');

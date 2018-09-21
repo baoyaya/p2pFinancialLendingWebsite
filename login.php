@@ -76,7 +76,7 @@
        Modal content
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+        <!-- <button type="button" class="btn btn-default closewindow" data-dismiss="modal">关闭窗口</button> -->
       </div>
     </div>
   </div>

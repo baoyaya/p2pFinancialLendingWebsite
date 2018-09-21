@@ -66,12 +66,6 @@
             <input type="text" class="form-control" id="inputMobile" name="mobilePhone" placeholder="请输入手机号码">
           </div>
         </div>
-        <!-- <div class="form-group">
-          <label for="inputmobiles" class="col-md-3 control-label">手机号码</label>
-          <div class="col-md-9">
-            <input type="text" class="form-control" id="inputmobiles" name="mobiles" placeholder="请输入手机号码">
-          </div>
-        </div> -->
         <!-- 邮箱 -->
         <div class="form-group">
           <label for="inputemail" class="col-md-3 control-label">邮箱</label>
